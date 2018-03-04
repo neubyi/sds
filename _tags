@@ -1,0 +1,10 @@
+true : color(always), bin_annot, safe_string, principal
+<src> : include
+<test> : include
+
+true: package(astring sexplib)
+
+<src/*>: package(lwt lwt.unix)
+<src/conf.ml>: package(ppx_sexp_conv)
+
+<test/*>: package(alcotest)

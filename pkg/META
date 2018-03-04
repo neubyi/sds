@@ -1,0 +1,7 @@
+description = "Simple Drop Service"
+version = "%%VERSION_NUM%%"
+requires = ""
+archive(byte) = "sds.cma"
+archive(native) = "sds.cmxa"
+plugin(byte) = "sds.cma"
+plugin(native) = "sds.cmxs"
