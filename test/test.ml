@@ -10,7 +10,7 @@ let config_err =
     let pp ppf c =
       Fmt.pf ppf "%d %a %s %s %s"
         c.version
-        (Fmt.list ~sep:Fmt.nop Fmt.string) c.dest_email_addrs
+        (Fmt.list ~sep:(Fmt.unit ",") Fmt.string) c.dest_email_addrs
         c.from_email_addr
         c.mta_hostname
         c.mta_port
