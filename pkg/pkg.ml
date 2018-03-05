@@ -4,7 +4,7 @@
 open Topkg
 
 let () =
-  Pkg.describe "sds" @@ fun c ->
+  Pkg.describe "sds" @@ fun _ ->
   Ok [ Pkg.bin "src/send";
        Pkg.bin "src/recv";
        Pkg.mllib "src/sds.mllib";
