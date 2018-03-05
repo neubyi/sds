@@ -8,4 +8,6 @@ true: package(astring sexplib)
 <src/conf.ml>: package(ppx_sexp_conv)
 <src/recv.*>: package(cohttp cohttp-lwt-unix)
 
+<src/recv.*>: package(cohttp cohttp-lwt-unix)
+
 <test/*>: package(alcotest)
