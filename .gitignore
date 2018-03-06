@@ -3,6 +3,7 @@ tmp
 *~
 \.\#*
 \#*#
+*.depends
 *.install
 *.native
 *.byte
