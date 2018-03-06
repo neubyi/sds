@@ -1,22 +1,30 @@
-opam-version: "1.2"
-maintainer: "Núbi <ln+neubyi@4711.se>"
-authors: ["Núbi <ln+neubyi@4711.se>"]
+opam-version: "2.0"
+maintainer: "Núbi <neubyi@4711.se>"
+authors: ["Núbi <neubyi@4711.se>"]
 homepage: "https://github.com/neubyi/sds"
 doc: "https://neubyi.github.io/sds/doc"
 license: "BSD2"
-dev-repo: "https://github.com/neubyi/sds.git"
+dev-repo: "git+https://github.com/neubyi/sds.git#master"
 bug-reports: "https://github.com/neubyi/sds/issues"
 tags: []
-available: [ ocaml-version >= "4.01.0"]
 depends:
 [
+  "ocaml" {>= "4.01.0"}
   "ocamlfind" {build}
   "ocamlbuild" {build}
   "topkg" {build & >= "0.9.0"}
+  "astring"
+  "sexplib"
+  "ppx_sexp_conv"
+  "lwt"
+  "cohttp"
+  "cohttp-lwt"
+  "cohttp-lwt-unix"
+  "alcotest"
 ]
 depopts: []
 build:
 [[
   "ocaml" "pkg/pkg.ml" "build"
-          "--dev-pkg" "%{pinned}%"
+          "--dev-pkg" "%{dev}%"
 ]]

@@ -4,4 +4,4 @@ S test
 B _build/src
 B _build/test
 
-PKG topkg lwt lwt.unix astring sexplib alcotest
+PKG topkg lwt lwt.unix astring sexplib alcotest cohttp cohttp-lwt-unix
