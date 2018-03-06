@@ -29,5 +29,9 @@ depopts: []
 build:
 [[
   "ocaml" "pkg/pkg.ml" "build"
-          "--dev-pkg" "%{dev}%"
+    "--dev-pkg" "%{dev}%"
+    "--tests" "%{with-test}%"
 ]]
+run-test: [
+  [ "ocaml" "pkg/pkg.ml" "test" ]
+]
